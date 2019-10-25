@@ -90,23 +90,35 @@ app_license = "GNU General Public License v3.0"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-# 	"all": [
-# 		"frappe_training.tasks.all"
-# 	],
-# 	"daily": [
-# 		"frappe_training.tasks.daily"
-# 	],
-# 	"hourly": [
-# 		"frappe_training.tasks.hourly"
-# 	],
-# 	"weekly": [
-# 		"frappe_training.tasks.weekly"
-# 	]
-# 	"monthly": [
-# 		"frappe_training.tasks.monthly"
-# 	]
-# }
+scheduler_events = {
+	# Se ejecuta cada 4 minuts
+	# "all": [
+	# 	"frappe_training.tasks.all"
+	# ],
+	# Se ejecuta cada dia 00:00
+	"daily": [
+		"frappe_training.tasks.daily"
+	],
+	# Se ejecuta a cada hora
+	"hourly": [
+		"frappe_training.tasks.hourly"
+	],
+	# Cron linux especificacion freq
+	"cron": {
+		# Cada minuto
+		"0/01 * * * *": [
+			"frappe_training.task.cada_minuto"
+		]
+	}
+	# Se ejecuta acada semana
+	# "weekly": [
+	# 	"frappe_training.tasks.weekly"
+	# ],
+	# # Se ejecuta cada mes
+	# "monthly": [
+	# 	"frappe_training.tasks.monthly"
+	# ]
+}
 
 # Testing
 # -------

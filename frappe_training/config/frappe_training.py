@@ -21,6 +21,23 @@ def get_data():
 				}
 			]
 		},
+		{
+			"label": _("Consumiendo APIs"),
+			"items": [
+				{
+					"type": "doctype",
+					"label": _("Registro tipo cambio"),
+					"name": "Registro tipo cambio",
+					"description": _("Ejemplo api"),
+				},
+				{
+					"type": "doctype",
+					"label": _("Configuracion Tipo Cambio"),
+					"name": "Configuracion Tipo Cambio",
+					"description": _("Configuracion Tipo Cambio"),
+				}
+			]
+		},
 		# {
 		# 	"label": _("Analytics"),
 		# 	"icon": "fa fa-table",
